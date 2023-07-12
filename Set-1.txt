@@ -1,0 +1,131 @@
+Problem 1:
+
+```
+CREATE TABLE Customers(
+    -> id INT PRIMARY KEY,
+    -> name VARCHAR(100),
+    -> email VARCHAR(100),
+    -> address VARCHAR(255),
+    -> phone_number VARCHAR(50)
+    -> );
+```
+
+
+Problem 2:
+
+```
+mysql> INSERT INTO Customers (id,name,email,address,phone_number)
+    -> VALUES (1,'Rishabh Roy','rishabh@gmail.com','123 Street, Noida','1234567899');
+
+mysql> INSERT INTO Customers (id,name,email,address,phone_number)
+    -> VALUES (2,'Sparsh Kotwani','sparsh@gmail.com','123 Street, Katni','7723457899');
+
+mysql> INSERT INTO Customers (id,name,email,address,phone_number)
+    -> VALUES (3,'Khemchand Sharma','khem@gmail.com','123 Street, Delhi','9999457899');
+
+mysql> INSERT INTO Customers (id,name,email,address,phone_number)
+    -> VALUES (4,'Varun Bhatt','varun@gmail.com','123 Street, Rishikesh','8989457899');
+
+mysql> INSERT INTO Customers (id,name,email,address,phone_number)
+    -> VALUES (5,'Masai School','masai@gmail.com','123 Street, Bengaluru','9999999999');
+```
+
+
+Problem 3:
+```
+mysql> SELECT *
+    -> FROM Customers;
+```
+
+
+Problem 4:
+```
+mysql> SELECT name,email
+    -> FROM Customers;
+```
+
+
+Problem 5:
+```
+mysql> SELECT * 
+    -> FROM Customers
+    -> WHERE id = 3;
+```
+
+
+Problem 6:
+```
+mysql> SELECT *
+    -> FROM Customers
+    -> WHERE name LIKE 'A%';
+```
+
+
+Problem 7:
+```
+mysql> SELECT *
+    -> FROM Customers
+    -> ORDER BY name DESC;
+```
+
+
+Problem 8:
+```
+mysql> UPDATE Customers
+    -> SET address = '123 Street, Bengaluru'
+    -> WHERE id = 4;
+```
+
+Problem 9:
+```
+mysql> SELECT *
+    -> FROM Customers
+    -> ORDER BY id ASC
+    -> LIMIT 3;
+```
+
+
+Problem 10:
+```
+mysql> DELETE FROM Customers
+    -> WHERE id = 2;
+```
+
+
+Problem 11:
+```
+mysql> SELECT COUNT(*) as total_customers
+    -> FROM Customers;
+```
+
+
+Problem 12:
+```
+mysql> SELECT *
+    -> FROM Customers
+    -> ORDER BY id ASC
+    -> LIMIT 5
+    -> OFFSET 2;
+```
+
+
+Problem 13:
+```
+mysql> SELECT *
+    -> FROM Customers
+    -> WHERE id > 2 AND name LIKE 'B%';
+```
+
+Problem 14:
+```
+mysql> SELECT *
+    -> FROM Customers
+    -> WHERE id < 3 OR name LIKE '%s';
+```
+
+Problem 15:
+```
+mysql> SELECT *
+    -> FROM Customers 
+    -> WHERE phone_number IS NULL;
+```
